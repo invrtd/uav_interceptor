@@ -1,0 +1,18 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+
+# Build artifacts (submodules keep their own build dirs)
+external/*/build/
+external/ardupilot/build/
+
+# Gazebo runtime artifacts
+*.log
+.gz/
+
+# Local tooling / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

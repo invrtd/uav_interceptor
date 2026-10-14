@@ -1,0 +1,23 @@
+# Interceptor parameters (layered on the gazebo-iris frame defaults).
+# Applied by scripts/run-intercept.sh to SITL instance -I0.
+#
+# Follow-mode baseline: the interceptor tracks the target via FOLLOW_TARGET,
+# which is exactly what fake_gs/oracle.py emits (and what the real ground
+# station will emit). See docs/interface.md and docs/roadmap.md (M2).
+
+# Enable follow and bind it to the target vehicle's system id.
+FOLL_ENABLE    1
+FOLL_SYSID     2
+
+# Relative offset in NED from the target. Zero = aim at the target itself
+# (pursue-to-contact, M3). Set FOLL_OFS_X negative to trail behind instead.
+FOLL_OFS_TYPE  0
+FOLL_OFS_X     0
+FOLL_OFS_Y     0
+FOLL_OFS_Z     0
+
+# Point the nose at the target rather than maintaining current heading.
+FOLL_YAW_BEHAVE 2
+
+# How far the target may be before follow gives up.
+FOLL_DIST_MAX  200

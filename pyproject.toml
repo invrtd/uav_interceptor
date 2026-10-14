@@ -1,0 +1,33 @@
+[project]
+name = "ardupilot-gazebo-sim"
+version = "0.1.0"
+description = "Team dev environment for ArduPilot SITL + Gazebo (college project)"
+requires-python = ">=3.10"
+dependencies = [
+    # ArduPilot SITL core tooling (see external/ardupilot/Tools/environment_install/install-prereqs-ubuntu.sh)
+    "empy==3.3.4",   # version-critical: ArduPilot's build/param parsing breaks on other versions
+    "pymavlink",
+    "MAVProxy",
+    "pyserial",
+    "lxml",
+    "dronecan",
+    "intelhex",
+    "pexpect",
+    "ptyprocess",
+    "geocoder",
+    "junitparser",
+    "tabulate",
+    "wsproto",
+    # Log analysis / MAVExplorer / vision helpers
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pyparsing",
+    "psutil",
+    "pyyaml",
+    "opencv-python",
+]
+
+[tool.uv]
+# This repo drives an environment only; it is not an installable package.
+package = false

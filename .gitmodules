@@ -1,0 +1,8 @@
+[submodule "external/ardupilot_gazebo"]
+	path = external/ardupilot_gazebo
+	url = https://github.com/ArduPilot/ardupilot_gazebo
+	ignore = dirty
+[submodule "external/ardupilot"]
+	path = external/ardupilot
+	url = https://github.com/ArduPilot/ardupilot.git
+	ignore = dirty
